@@ -15,9 +15,9 @@
         <li><b>Status:</b> {{ tarefa.status }}</li>
         <li><b>Prazo:</b> {{ tarefa.prazo }}</li>
 
-        {% if tarefa.prazo < hoje %}
+        {% if tarefa.prazo < hoje and tarefa.status != "Completa" %}
            <p class="text-danger fw-bolder m-0">ATRASADO!</p>
-        {% endif%}
+        {% endif %}
     </ul>
     <hr>
     {% endfor %}
